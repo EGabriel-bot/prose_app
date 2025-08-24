@@ -14,7 +14,8 @@ public class OpenLibraryResponse {
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class OpenLibraryDoc {
+    public static class OpenLibraryDoc
+    {
         private String title;
         private Integer edition_count;
         private List<String> author_name;
