@@ -1,0 +1,29 @@
+{
+  "name": "prose-app",
+  "version": "1.0.0",
+  "description": "Prose application monorepo",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel run dev",
+    "build": "pnpm --recursive run build",
+    "lint": "pnpm --recursive run lint",
+    "test": "pnpm --recursive run test",
+    "client:dev": "pnpm --filter prose run start",
+    "server:dev": "pnpm --filter prose-api run dev",
+    "install:all": "pnpm install"
+  },
+  "keywords": [
+    "monorepo",
+    "pnpm",
+    "workspace"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8"
+  },
+  "dependencies": {
+    "arktype": "^2.1.22"
+  }
+}
