@@ -32,6 +32,6 @@
     "pnpm": ">=8"
   },
   "dependencies": {
-    "arktype": "^2.1.22"
+    "zod": "^4.1.5"
   }
 }

@@ -2,13 +2,13 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "prose-api",
   "main": "src/index.ts",
-  "compatibility_date": "2025-09-06"
+  "compatibility_date": "2025-09-06",
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],
-  // "vars": {
-  //   "MY_VAR": "my-variable"
-  // },
+  "vars": {
+    "DATABASE_URL": "postgresql://neondb_owner:npg_uG7bqEdVTP3H@ep-curly-boat-a8h9re0r-pooler.eastus2.azure.neon.tech/neondb?sslmode=require&channel_binding=require"
+  },
   // "kv_namespaces": [
   //   {
   //     "binding": "MY_KV_NAMESPACE",

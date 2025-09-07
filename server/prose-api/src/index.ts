@@ -1,9 +1,19 @@
 import { Hono } from 'hono'
+import { initDbClient } from './db/DbClient';
+import { addUser } from './controllers/userController';
+import { getBooks } from './controllers/bookController';
 
-const app = new Hono()
+type Bindings = {
+      DATABASE_URL: string;
+};
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+const app = new Hono<{ Bindings: Bindings }>();
+app.use('*', async (c, next) => {
+  initDbClient(c.env.DATABASE_URL);
+  await next();
+});
+
+app.post('/createUser', addUser);
+app.get('/getBooks/:bookName', getBooks);
 
 export default app
