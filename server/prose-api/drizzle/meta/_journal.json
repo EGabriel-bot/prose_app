@@ -8,6 +8,13 @@
       "when": 1757270759488,
       "tag": "0000_slippery_jack_murdock",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1757352026570,
+      "tag": "0001_easy_polaris",
+      "breakpoints": true
     }
   ]
 }
