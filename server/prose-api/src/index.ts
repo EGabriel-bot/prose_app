@@ -6,6 +6,10 @@ import {
   saveBooks,
   listStoredBooks,
 } from "./controllers/bookController";
+import {
+  getUserShelf,
+  createUserBook,
+} from "./controllers/userBooksController";
 type Bindings = {
   DATABASE_URL: string;
 };
@@ -19,10 +23,13 @@ app.use("*", async (c, next) => {
 
 //User
 app.post("/createUser", addUser);
+app.post("/user-books", createUserBook);
 
 //Books
 app.get("/getBooks/:bookName", getBooks);
 app.get("/books", listStoredBooks);
 app.post("/books", saveBooks);
+
+app.get("/users/:userId/books", getUserShelf);
 
 export default app;
